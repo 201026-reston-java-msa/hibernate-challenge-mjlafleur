@@ -36,7 +36,7 @@ public class MainClass {
 	
 	
 	public static void hibernateReadExample(){
-		System.out.println("hello world");
+		System.out.println("ReadExample");
 		
 		//Instantiate a Hibernate Dao
 		Dao dao = new BankDaoImpl();
@@ -51,7 +51,7 @@ public class MainClass {
 		System.out.println(user);
 	}
 	public static void hibernateReadAccount(){
-		System.out.println("hello world");
+		System.out.println("ReadAccount");
 		
 		//Instantiate a Hibernate Dao
 		Dao dao = new BankDaoImpl();
@@ -74,7 +74,7 @@ public class MainClass {
 		Dao dao = new BankDaoImpl();
 						
 		//Instantiate a BankUser Mapped to a Table, provide the primary key
-		BankUser user = new BankUser("jen2","123", "generator", "values");
+		BankUser user = new BankUser("jen","123", "generator", "values");
 				
 		dao.createUser(user);
 		System.out.println("done saving user to db");

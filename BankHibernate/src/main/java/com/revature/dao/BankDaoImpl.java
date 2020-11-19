@@ -87,11 +87,11 @@ public class BankDaoImpl implements Dao{
 		 *  org.hibernate.LazyInitializationException thrown when accessing something that was "lazy loaded"
 		 *  
 		 */
-//		BankUser user = (BankUser) session.get(BankUser.class, 3);
-		BankUser user = (BankUser) session.load(BankUser.class, 2);
+		BankUser user = (BankUser) session.get(BankUser.class, 3);
+//		BankUser user = (BankUser) session.load(BankUser.class, 2);
 		
 		System.out.println(user.getClass() + ": is this the bank user class?");
-//		System.out.println(user.getUsername() + ": bankuser");
+		System.out.println(user.getUsername() + ": bankuser");
 		
 		session.close();
 		
@@ -153,7 +153,7 @@ public class BankDaoImpl implements Dao{
 		 * 
 		 */
 		john = (BankUser) session.merge(john);
-//		BankUser anotherJohn = (BankUser) session.merge(john2);//can we add john2 that is also bankuser object with the id of 2? YES by using merge()
+		BankUser anotherJohn = (BankUser) session.merge(john2);//can we add john2 that is also bankuser object with the id of 2? YES by using merge()
 		session.update(john); 
 		System.out.println("--------BEFORE COMMIT------------");
 		
@@ -167,7 +167,7 @@ public class BankDaoImpl implements Dao{
 	}
 	
 public static void main(String[] args) {
-//	new BankDaoImpl().updateVsMerge();
+	new BankDaoImpl().updateVsMerge();
 	new BankDaoImpl().getBankAccountById(new BankAccount());
 	
 	List<BankUser> bankUsers = new BankDaoImpl().getBankUsersByUsingCriteria();
