@@ -28,10 +28,10 @@ public class MainClass {
 		// Experiment with the code below and configure the application
 		// to persist objects to your database.
 		//----------------------------------------------------------
-		
-//		hibernateReadExample();
-//		hibernateReadAccount();
-//		getVsLoad();
+		hibernateCreateExample();
+		hibernateReadExample();
+		hibernateReadAccount();
+		getVsLoad();
 	}
 	
 	
@@ -74,7 +74,7 @@ public class MainClass {
 		Dao dao = new BankDaoImpl();
 						
 		//Instantiate a BankUser Mapped to a Table, provide the primary key
-		BankUser user = new BankUser("jen","123", "generator", "values");
+		BankUser user = new BankUser("jen2","123", "generator", "values");
 				
 		dao.createUser(user);
 		System.out.println("done saving user to db");

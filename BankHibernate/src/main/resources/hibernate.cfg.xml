@@ -12,9 +12,9 @@
 	<session-factory> 
 		<!-- what properties does hibernate's sessionfactory need? JDBC Stuff: 
 			url, username, password, driver New Hibernate Stuff: the dialect -->
-		<property name="hibernate.connection.username">banking_db</property>
-		<property name="hibernate.connection.password">p4ssw0rd</property>
-		<property name="hibernate.connection.url">jdbc:prostgresql:// team-4.c9chs4ontkbe.us-east-1.rds.amazonaws.com:5432</property>
+		<property name="hibernate.connection.username">postgres</property>
+		<property name="hibernate.connection.password">postgres</property>
+		<property name="hibernate.connection.url">jdbc:postgresql://team-4.c9chs4ontkbe.us-east-1.rds.amazonaws.com:5432/postgres</property>
 		<property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
 
 		<!-- New Hibernate stuff -->

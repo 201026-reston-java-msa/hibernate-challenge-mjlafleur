@@ -52,7 +52,7 @@ public class BankDaoImpl implements Dao{
 		//	The benefit of an object being in the persistent state,
 		//	Hibernate will compare the Java Object to the Table Record and update the table record
 		//	if the two don't match
-		user.setFirstName("I HAVE CHANGED!");
+		user.setFirstName("I HAVE CHANGED AGAIN!");
 		
 		//commit
 		tx.commit();

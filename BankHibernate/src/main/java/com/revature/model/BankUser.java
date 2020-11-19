@@ -35,9 +35,8 @@ public class BankUser implements Serializable{
 	private static final long serialVersionUID = -2669661945821816492L;
 	
 	@Id
-	@SequenceGenerator(name="bank_user_seq", sequenceName="bank_user_seq")
-	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="bank_user_seq")
 	@Column(name="U_ID")
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int userId;
 	
 	@Column
